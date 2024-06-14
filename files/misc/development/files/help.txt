@@ -1,0 +1,57 @@
+Running the Program
+ - After selecting the question file and folder, the game will automatically run
+ - Players can be added or removed at any time through the Players Screen
+ - Options can be adjusted through the Settings Screen
+ - More features can be accessed through the Advanced Screen
+ - Warning: Moving the controller window around will pause the screen display
+
+Running a Game
+ - To display a question select the point value under each category
+    - End skips the current stage of the question
+    - Cancle ends the player's turn without penalty
+ - To display the description for a category, click the category
+ - After completing a board, the next board will load automatically
+ 
+Select Question File
+ - Question File can be .csv or .xlsx
+ - Board,Category,Description,Points,Question,Answer,Extra Time,Files
+ - It will ignore the first (header) row in a file
+ - Board, Category, and Description do not need to be repeated
+ - Extra Time gets added to the default question timer and can be negative
+ - Media Folder should contain all images, music, and video used in game
+    - Acceptable image types: any
+    - Acceptable music types: wav and mp3
+    - Acceptable video types: mp4 (audio for video must be saved seperate)
+    - Use commas to sepperate mutliple files for a single question
+       - No commas in file names
+ - Example located at 'files/development/sample questions/sample.csv'
+
+Players Screen
+ - With all controller objects connected
+ - Type in a player name and click add or enter
+ - Player will be prompted to press buzzer
+ - Allows for players names and points to be adjusted
+    - Hit enter on a cell to apply changes
+    - The cell handles math opperations, no need to solve yourself
+ - Refreshing devices can break player-button connections
+ 
+Advanced Screen
+ - New Game will start a new game with new players
+ - Load Question will open a single question from any board
+    - Question will be available for players to answer
+ - Move to Board will move the game to another board
+    - All question on the selected baord will be re-loaded
+ - History shows as history of all score and name changes
+    - Brackets indicate reason for change
+    
+Settings
+ - Question Timer is the standard guessing time for a question
+ - Response Timer is the time for a player to give an answer before the alarm
+ - Answer Timer is the time the answer is displayed after every question
+ - Multi-Guess allows players to guess multiple times for a single question
+ - Timer Bar displays remaining time as a bar on the bottom of the screen
+ - Timer Text displays remaining time as a number on the bottom of the screen
+ - Colors lets you change the default colors (requires restart)
+ - To change the sound effects, simply replace the .wav files in each 'sounds' folder
+ - To change the icon, replace the .ico file in the 'misc' folder
+ - To reset to default setting, deleate the 'settings.pkl' file
