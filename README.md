@@ -1,13 +1,13 @@
 # Description 
 
 ## Trivia Program
- - Baisc trivia program developed with python
- - Designed for a display screen, and control screen, and controler intput
+ - Basic trivia program developed with python
+ - Designed for a display screen, control screen, and controler intput
  - See 'help.txt' for more information
 
 # Edit Log
 
-## Contibuters:
+## Contributers:
  - Kian (creator): spykian@gmail.com
 
 ## Edit Log:
