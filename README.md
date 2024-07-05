@@ -57,7 +57,7 @@ Most of the code involves tkinter, so you should get familiar with that first.
 ## Executable Creation
 Turning this into an executable is a pain. Thankfully, I found the needed workaround already.
  - Open command prompt in the 'misc/development' folder
- - Type 'pyinstaller TriviaProgram.spec'
+ - Type 'pyinstaller TriviaProgram.spec' or 'python -m PyInstaller TriviaProgram.spec'
  - Wait for it to finish (~5 minutes)
  - Copy the executable from the 'dist' folder to the same level as the toplevel 'files' folder
  - You can then delete the 'dist', 'build', and '\_\_pychache\_\_' folders
