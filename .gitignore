@@ -1,2 +1,6 @@
 # Executables
 TriviaProgram.exe
+
+# Logs
+files/logs/*.txt
+files/misc/development/files/logs*.txt
