@@ -1,5 +1,5 @@
 # Executables
-TriviaProgram.exe
+*.exe
 
 # Logs
 files/logs/*.txt
