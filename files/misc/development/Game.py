@@ -55,7 +55,7 @@ class Game():
                     c = last_c
             # Add Questions
             if row.iloc[3] != '':
-                self.B[b].C[c].Q.append(Question(row.iloc[3],row.iloc[4],row.iloc[5],row.iloc[6],row.iloc[7]))
+                self.B[b].C[c].Q.append(Question(row.iloc[3],row.iloc[4],row.iloc[5],row.iloc[6],row.iloc[7],row.iloc[8]))
     def reconnect(self):
         '''Refresh connected controllers'''
         pygame.joystick.quit()
@@ -150,7 +150,7 @@ class Question():
     @param answer Answer Text
     @param time Extra time for question
     @param file Image or music file for question'''
-    def __init__(self,points,text,answer,time,files):
+    def __init__(self,points,text,answer,time,files,ans_files):
         self.points     = int(points)
         self.text       = text
         self.answer     = answer
@@ -161,6 +161,9 @@ class Question():
         files           = [f.strip() for f in files.split(',')]
         if '' in files: files.remove('')
         self.files = files
+        ans_files       = [f.strip() for f in ans_files.split(',')]
+        if '' in ans_files: ans_files.remove('')
+        self.ans_files = ans_files
 
 class Files():
     def __init__(self):
