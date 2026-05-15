@@ -112,7 +112,7 @@ class C_Question(tk.Frame):
                 scale = self.main.height/pic.height*.6
                 h = int(pic.height*scale)
                 w = int(pic.width*scale)
-                screen.pic = ImageTk.PhotoImage(pic.resize((w,h),Image.ANTIALIAS))
+                screen.pic = ImageTk.PhotoImage(pic.resize((w,h),Image.Resampling.LANCZOS))
                 screen.image.config(image=screen.pic)
                 screen.image.grid()                
             except: pass

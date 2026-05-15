@@ -36,6 +36,7 @@ class Controller(tk.Toplevel):
         self.colors = C_Colors(self,main,game)
         self.file = C_File(self,main,game)
         self.start.tkraise()
+
     def on_closing(self,main,game):
         '''Quits'''
         temp = Confirm(self,main,"Are you sure you want to quit","Yes","No")
@@ -43,6 +44,7 @@ class Controller(tk.Toplevel):
             game.save()
             game.quit()
             main.destroy()
+            return
         temp.destroy()
         self.lift()
                     
@@ -716,7 +718,7 @@ class How2Play(tk.Toplevel):
         self.title("How to Play")
         self.lift()
         text = tk.Text(self)
-        with open('files\help.txt','r') as myfile:
+        with open(r'files\help.txt','r') as myfile:
             help_text = myfile.read()
         text.insert("insert",help_text)
         text.pack()    

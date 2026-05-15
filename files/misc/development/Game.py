@@ -22,40 +22,41 @@ class Game():
         self.H = [] # History
         self.F = Files()
         self.reconnect()
-    def new(self,file):
+
+    def new(self, file: str):
         '''Load data from question file'''
         self.F.file = file
         self.H.append('Loaded: {}'.format(os.path.basename(file)))
         self.B = []
         if file[-3:] == 'csv':
-            data = read_csv(file,keep_default_na=False)
+            data = read_csv(file, keep_default_na=False)
         elif file[-4:] == 'xlsx':
-            data = read_excel(file,keep_default_na=False)
+            data = read_excel(file, keep_default_na=False)
         else:
             return
-        for index,row in data.iterrows():
+        for index, row in data.iterrows():
             try:
-                b = [B.name for B in self.B].index(row[0])         
+                b = [B.name for B in self.B].index(row.iloc[0])
             except ValueError:
-                if row[0] != '':
-                    self.B.append(Board(row[0]))
+                if row.iloc[0] != '':
+                    self.B.append(Board(row.iloc[0]))
                     b = len(self.B)-1
                     last_b = b
                 else:
                     b = last_b
             # Find Category
             try:
-                c = [C.name for C in self.B[b].C].index(row[1])         
+                c = [C.name for C in self.B[b].C].index(row.iloc[1])
             except ValueError:
-                if row[1] != '':
-                    self.B[b].C.append(Category(row[1],row[2]))
+                if row.iloc[1] != '':
+                    self.B[b].C.append(Category(row.iloc[1],row.iloc[2]))
                     c = len(self.B[b].C)-1
                     last_c = c
                 else:
                     c = last_c
             # Add Questions
-            if row[3] != '':
-                self.B[b].C[c].Q.append(Question(row[3],row[4],row[5],row[6],row[7]))
+            if row.iloc[3] != '':
+                self.B[b].C[c].Q.append(Question(row.iloc[3],row.iloc[4],row.iloc[5],row.iloc[6],row.iloc[7]))
     def reconnect(self):
         '''Refresh connected controllers'''
         pygame.joystick.quit()
@@ -106,7 +107,7 @@ class Game():
     def save(self):
         if len(self.H) > 0:
             try: 
-                name = datetime.now().strftime('files\logs\%y-%m-%d__%H-%M.txt')
+                name = datetime.now().strftime(r'files\logs\%y-%m-%d__%H-%M.txt')
                 with open(name,'w') as f:
                     f.write('--------- Scores ---------\n')
                     for p in self.ordered():
