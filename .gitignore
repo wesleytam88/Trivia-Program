@@ -1,5 +1,8 @@
-# Executables
+# Build
 TriviaProgram.exe
+build
+dist
+__pycache__
 
 # Logs
 files/logs/*.txt

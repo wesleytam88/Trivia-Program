@@ -5,32 +5,6 @@
  - Designed for a display screen, control screen, and controler intput
  - See `help.txt` for more information
 
-# Edit Log
-
-## Contributers:
- - Kian (creator): spykian@gmail.com
-
-## Edit Log:
-2019/10/10 - Kian
-  - Added confirmation to closing
-
-2019/05/15 - Kian
-  - Added video images
-  - Adjusted display of player scores
-
-2019/05/14 - Kian
-  - Added history logging
-  - Pause and end now function during answer display
-
-2019/04/12 - Kian
-  - Added volume settings
-  - Settings now saved between launches
-  - Multiple display changes
-  - Re-orginzed file structure
-
-2018/07/26 - Kian
-  - Program Launch
-
 # Development Details
 
 ## Code Location
@@ -42,6 +16,7 @@
  - pygame
  - pandas
  - opencv-python
+ - Pillow
  - pyinstaller
 
 ## Tkinter 
@@ -60,4 +35,4 @@ Turning this into an executable is a pain. Thankfully, I found the needed workar
  - Type `pyinstaller TriviaProgram.spec` or `python -m PyInstaller TriviaProgram.spec`
  - Wait for it to finish (~5 minutes)
  - Copy the executable from the `dist` folder to the same level as the toplevel `files` folder
- - You can then delete the `dist`, `build`, and `\_\_pychache\_\_` folders
+ - You can then delete the `dist`, `build`, and `__pycache__` folders
