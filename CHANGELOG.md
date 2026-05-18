@@ -5,6 +5,9 @@
  - Wesley: wesleytam88@gmail.com
 
 ## Edit Log:
+2026/05/18 - Wesley
+  - Simplified and deduplicated project file structure
+
 2026/05/15 - Wesley
   - Removed deprecated function calls
   - Improved cleanup when closing program

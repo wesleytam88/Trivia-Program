@@ -6,4 +6,3 @@ __pycache__
 
 # Logs
 files/logs/*.txt
-files/misc/development/files/logs/*.txt

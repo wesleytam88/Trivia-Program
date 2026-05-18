@@ -2,22 +2,18 @@
 
 ## Trivia Program
  - Basic trivia program developed with python
- - Designed for a display screen, control screen, and controler intput
- - See `help.txt` for more information
+ - Designed for a display screen, control screen, and controller input
+ - See `src/files/help.txt` for more information on how to play
 
 # Development Details
 
 ## Code Location
- - Source code located in the `misc/development` folder
+ - Source code located in the `src` folder
  - Program can be run from any of the code files instead of executable
- - Sample questions in the development folder can be used for debugging
+ - `sample_questions` can be used for debugging
 
 ## Dependencies
- - pygame
- - pandas
- - opencv-python
- - Pillow
- - pyinstaller
+See `requirements.txt`
 
 ## Tkinter 
 Most of the code involves tkinter, so you should get familiar with that first.
@@ -31,8 +27,22 @@ Most of the code involves tkinter, so you should get familiar with that first.
 	
 ## Executable Creation
 Turning this into an executable is a pain. Thankfully, I found the needed workaround already.
- - Open command prompt in the 'misc/development' folder
- - Type `pyinstaller TriviaProgram.spec` or `python -m PyInstaller TriviaProgram.spec`
+ - Open command prompt in the the `src` folder
+ - Run `pyinstaller TriviaProgram.spec`
+   - If that does not work try `python -m PyInstaller TriviaProgram.spec`
  - Wait for it to finish (~5 minutes)
- - Copy the executable from the `dist` folder to the same level as the toplevel `files` folder
+ - Copy the executable from the `dist` folder to the top level root folder
+   - The .exe looks for the sounds, logs, and other files it needs to run in the `files` folder in its current directory, which is why we have to move it to the root folder
  - You can then delete the `dist`, `build`, and `__pycache__` folders
+
+## Customization
+
+### Sounds
+If you do not like the default sounds that play during the game, you can use your own custom sounds by adding them to the `files/sounds` folder. Sounds are chosen by the game randomly, so if you want only your own custom sounds to play you can remove all but your own sounds.
+ - `alarm`: plays when time has run out on a question
+ - `correct`: plays when a player answers a question correctly
+ - `ding`: plays when a player buzzes in
+ - `incorrect`: plays when a player answers a question incorrectly
+
+### Icon
+To change the icon, replace the `icon.ico` file in the `misc` folder.
