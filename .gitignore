@@ -1,5 +1,4 @@
 # Build
-TriviaProgram.exe
 build
 dist
 __pycache__
