@@ -5,6 +5,9 @@
  - Designed for a display screen, control screen, and controller input
  - See `src/files/help.txt` for more information on how to play
 
+## Acknowledgements
+spykian@gmail.com is the original creator of this program, I have only helped to maintain it to be compatible with modern libraries.
+
 # Development Details
 
 ## Code Location
